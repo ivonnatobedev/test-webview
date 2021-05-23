@@ -5,10 +5,12 @@
   </head>
   <body>
     <div id="test">
-      test
     </div>
     <script>
       console.log('--userAgent--', navigator.userAgent);
+      const userAgent = navigator.userAgent;
+      const el = document.getElementById('test');
+      el.innerHTML = userAgent.toString();
     </script>
   </body>
 </html>
