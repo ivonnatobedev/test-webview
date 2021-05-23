@@ -4,13 +4,17 @@
     <title>TEST</title>
   </head>
   <body>
-    <div id="test">
-    </div>
+    <div id="test"></div>
+    <div id="test2"></div>
     <script>
-      console.log('--userAgent--', navigator.userAgent);
       const userAgent = navigator.userAgent;
       const el = document.getElementById('test');
       el.innerHTML = userAgent.toString();
+
+      const standalone = window.navigator.standalone;
+      const el = document.getElementById('test2');
+      el.innerHTML = standalone ? standalone.toString() : 'empty';
+      
     </script>
   </body>
 </html>
